@@ -23,26 +23,7 @@ This platform transforms unstructured medical reports (PDFs, scans, camera captu
 
 ---
 
-## 📐 Architecture Overview
 
-```mermaid
-graph TD
-    A[Upload PDF/Image] --> B[Multi-Engine OCR Ensemble]
-    B -->|Tesseract / EasyOCR| C[Normalized Raw Text]
-    C --> D[Regex & Text Cleaning]
-    D --> E[Adaptive Processing Engine]
-    
-    E -->|Confidence > 85%| F[Standard LLM Parsing]
-    E -->|Confidence 70-85%| G[LLM Ensemble Voting]
-    E -->|Confidence < 70%| H[Ensemble + Human Review Flag]
-    
-    F & G & H --> I[Structured JSON Laboratory Data]
-    I --> J[ChromaDB Medical RAG Lookup]
-    J -->|Context Retrieval| K[AI Medical Summary Generator]
-    K --> L[Structured JSON + Clinical Narrative Result]
-```
-
----
 
 ## 📂 Project Structure
 
