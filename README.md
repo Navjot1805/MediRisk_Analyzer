@@ -1,4 +1,4 @@
-# 🏥 AI-Powered Medical Report Summarizer
+# 🏥 Medical Report Summarizer using RAG
 
 An advanced, production-grade end-to-end medical report digitization, structuring, validation, and AI-guided summarization system. 
 
